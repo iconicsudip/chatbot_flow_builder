@@ -56,4 +56,4 @@ The Chatbot Flow Builder is a tool for creating chatbot flows by connecting mult
 1. Clone the repository.
 2. Install dependencies with `npm install` or `yarn install`.
 3. Run the development server with `npm run dev` or `yarn run dev`.
-
+4. Deployed link - https://chatbot-flow.netlify.app
