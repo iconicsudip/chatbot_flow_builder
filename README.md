@@ -33,6 +33,10 @@ The Chatbot Flow Builder is a tool for creating chatbot flows by connecting mult
    - Saves the flow.
    - Shows an error if there are more than one nodes and more than one node has empty target handles.
 
+## Bonus Features
+- User can delete nodes
+- Save changes button will only enable when some changes are made by user.
+
 ## Technologies Used
 
 - ReactFlow: Building the flow builder interface.
