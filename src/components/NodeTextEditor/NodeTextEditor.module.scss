@@ -1,0 +1,43 @@
+.text_editor_header {
+    border-bottom: 1px solid #dedede;
+    padding: 0.5rem 1rem;
+    display: ruby-text;
+
+    svg {
+        font-size: 1.1rem;
+        line-height: 1;
+        padding: 4px;
+        cursor: pointer;
+        &.back{
+            background: #e5e5e5;
+                border-radius: 50%;
+                transition: background 0.2s;
+                float: left;
+            
+                &:hover {
+                    background: #dedede;
+                }
+        }
+        &.trash{
+            background: #ff4343;
+                border-radius: 50%;
+                transition: background 0.2s;
+                float: right;
+                color: white;
+                &:hover {
+                    background: #ff2a2a;
+                }
+        }
+    }
+}
+
+.message_box {
+    padding: 1rem;
+    border-bottom: 1px solid #dedede;
+    .message_heading {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 4px;
+        color: #000000;
+    }
+}

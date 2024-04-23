@@ -1,0 +1,30 @@
+.canvas{
+    height: 100vh;
+    display: flex;
+    padding-top: 48px;
+}
+.header{
+    display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+        background: #ededed;
+        position: fixed;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        .heading{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            .logo {
+                font-size: 2rem;
+                    padding: 1px;
+                    background: white;
+                    border-radius: 50%;
+                    fill: #18bd35;
+                    stroke: #f4fff6;
+                    stroke-width: 1.5px;
+                }
+        }
+}

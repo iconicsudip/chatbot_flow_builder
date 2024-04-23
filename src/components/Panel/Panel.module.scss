@@ -1,0 +1,38 @@
+.panel {
+    border-left: 1.5px solid #dedede;
+    width: calc(var(--panel-width));
+    .panel_board{
+        display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+            gap: 12px;
+
+        padding: 1rem;
+    }
+}
+.node_button{
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        border: 1px solid #1271f5;
+        border-radius: 4px;
+        cursor: pointer;
+        color: #1271f5;
+        flex-direction: column;
+        padding: 12px;
+        height: max-content;
+        gap: 4px;
+        &:hover{
+            background-color: #f5f5f5;
+        }
+    svg{
+        font-size: 1.5rem;
+        line-height: 1;
+    }
+    p{
+        margin: 0;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 1;
+    }
+}

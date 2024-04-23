@@ -1,0 +1,62 @@
+.drag_area {
+    display: flex;
+    width: calc(100% - 16px);
+    height: 24px;
+    background-color: rgb(163, 255, 178);
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    border-radius: 4px;
+
+    p {
+        margin: 0;
+        font-size: 10px;
+        font-weight: 800;
+        line-height: 1;
+    }
+}
+
+.node {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &.selected {
+        border: 2px solid #18bd35;
+    }
+}
+
+.logo {
+    padding: 1px;
+    background: white;
+    border-radius: 50%;
+    fill: #18bd35;
+    stroke: #f4fff6;
+    stroke-width: 1.5px;
+}
+
+.left_handle {
+    background-color: red;
+}
+
+.right_handle {
+    background-color: blue;
+}
+
+.empty_text {
+    margin: 0;
+    padding: 8px;
+    font-size: 8px;
+    width: calc(100% - 16px);
+    color: #999898;
+}
+
+.content_text {
+    margin: 0;
+    padding: 8px;
+    font-size: 8px;
+    width: calc(100% - 16px);
+    color: #000000;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
