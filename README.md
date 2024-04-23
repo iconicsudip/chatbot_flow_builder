@@ -1,30 +1,55 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Chatbot Flow Builder
 
-Currently, two official plugins are available:
+The Chatbot Flow Builder is a tool for creating chatbot flows by connecting multiple text nodes to determine the sequence of interactions.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+1. **Text Node**
+   - Supports only text messages.
+   - Multiple text nodes can be added to a single flow.
+   - Nodes can be added to the flow by dragging and dropping from the Nodes Panel.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+2. **Nodes Panel**
+   - Contains all supported node types.
+   - Currently supports only text nodes but can be extended for more node types in the future.
 
-- Configure the top-level `parserOptions` property like this:
+3. **Edge**
+   - Connects two nodes to define the flow.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+4. **Source Handle**
+   - Originates from a source node.
+   - Only one edge can originate from a source handle.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+5. **Target Handle**
+   - Connects to a target node.
+   - Multiple edges can connect to a target handle.
+
+6. **Settings Panel**
+   - Appears when a node is selected.
+   - Allows editing the text content of the selected text node.
+
+7. **Save Button**
+   - Saves the flow.
+   - Shows an error if there are more than one nodes and more than one node has empty target handles.
+
+## Technologies Used
+
+- ReactFlow: Building the flow builder interface.
+- React: Building the UI components.
+- TypeScript: Used for implementation.
+- Antd: For components.
+
+## Usage
+
+1. Drag and drop text nodes to create a flow.
+2. Connect nodes using edges to define the conversation flow.
+3. Single click on nodes to edit their text content or delete node.
+4. Click the Save button to save the flow. An error will be shown if there are any configuration issues.
+
+## Development
+
+1. Clone the repository.
+2. Install dependencies with `npm install` or `yarn install`.
+3. Run the development server with `npm run dev` or `yarn run dev`.
+
