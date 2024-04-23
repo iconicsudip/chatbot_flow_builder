@@ -51,14 +51,12 @@ export default function Home() {
 
     useEffect(() => {
         const localNodes = localStorage.getItem('nodes');
-        if (localNodes) {
-            const parsedLocalNodes = JSON.parse(localNodes);
-            const hasLabelChanges = nodes.some((node: T_Node) => node.data.label !== parsedLocalNodes.filter((n: T_Node) => n.id === node.id)[0]?.data?.label);
-            const hasPositionChanges = nodes.some((node: T_Node) => node.position.x !== parsedLocalNodes.filter((n: T_Node) => n.id === node.id)[0]?.position?.x || node.position.y !== parsedLocalNodes.filter((n: T_Node) => n.id === node.id)[0]?.position?.y);
-            const hasLengthChanges = nodes.length !== parsedLocalNodes.length;
+        const parsedLocalNodes = JSON.parse(localNodes ?? '[]');
+        const hasLabelChanges = nodes.some((node: T_Node) => node.data.label !== parsedLocalNodes.filter((n: T_Node) => n.id === node.id)[0]?.data?.label);
+        const hasPositionChanges = nodes.some((node: T_Node) => node.position.x !== parsedLocalNodes.filter((n: T_Node) => n.id === node.id)[0]?.position?.x || node.position.y !== parsedLocalNodes.filter((n: T_Node) => n.id === node.id)[0]?.position?.y);
+        const hasLengthChanges = nodes.length !== parsedLocalNodes.length;
 
-            setIsChanged(hasLabelChanges || hasLengthChanges || hasPositionChanges);
-        }
+        setIsChanged(hasLabelChanges || hasLengthChanges || hasPositionChanges);
     }, [nodes]);
     return (
         <div>
